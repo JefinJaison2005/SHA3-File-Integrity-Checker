@@ -87,17 +87,11 @@ python cli_integrity_checker.py
 ### Home Screen
 
 > Add your GUI screenshot here after uploading it.
+![Home](home.png)
 
-```markdown
-![Home Screen](screenshots/home.png)
-```
+![Registered](registered.png)
 
-### Verification
-
-```markdown
-![Verification](screenshots/verified.png)
-```
-
+![Verified](verified.png)
 ---
 
 # 📂 Project Structure

@@ -1,116 +1,112 @@
-# 🔐 SHA3 File Integrity Checker
+# 🔐 SHA3 Secure File Integrity Checker
+
+A Python-based application for **file integrity verification** using the **SHA3-256 cryptographic hash algorithm**. This project provides both a **Command-Line Interface (CLI)** and a **Graphical User Interface (GUI)** built with **Tkinter**, allowing users to securely register files, verify file integrity, and generate verification reports.
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
-![SHA3-256](https://img.shields.io/badge/Algorithm-SHA3--256-green)
-![Status](https://img.shields.io/badge/Status-Completed-success)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
-A Python-based cybersecurity application that verifies file integrity using the **SHA3-256 cryptographic hash algorithm**. The application detects unauthorized file modifications by comparing newly generated hashes with previously stored trusted hashes.
+![GUI](https://img.shields.io/badge/GUI-Tkinter-success)
+![Algorithm](https://img.shields.io/badge/Algorithm-SHA3--256-red)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-# 📌 Table of Contents
+# 📖 Project Overview
 
-- Overview
-- Features
-- Project Architecture
-- Workflow
-- Folder Structure
-- Technologies Used
-- Installation
-- Usage
-- Future Improvements
-- Author
-- License
+File integrity verification is an essential aspect of cybersecurity, ensuring that files remain unmodified after registration. This project utilizes the **SHA3-256 cryptographic hashing algorithm** to detect unauthorized modifications by comparing the current file hash with the previously stored hash.
 
----
+The application offers two interfaces:
 
-# 📖 Overview
+- 🖥️ **Graphical User Interface (GUI)** built using Tkinter
+- ⌨️ **Command-Line Interface (CLI)** for terminal-based interaction
 
-The Secure File Integrity Checker is designed to ensure that important files remain unchanged after registration.
-
-The application generates a SHA3-256 cryptographic hash for a selected file and securely stores it. During verification, a new hash is generated and compared against the stored value.
-
-If both hashes match, the file is verified as authentic.
-
-If the hashes differ, the application reports that the file has been modified.
+Both interfaces use the same SHA3-256 hashing mechanism to register and verify files.
 
 ---
 
 # ✨ Features
 
-- 🔐 SHA3-256 Hash Generation
-- 📂 Register Files
-- ✅ Verify File Integrity
-- 📄 Automatic Verification Reports
-- 💾 Secure Hash Storage
-- 📁 Automatic Folder Creation
-- 🖥️ Menu Driven Interface
+- 🔒 SHA3-256 cryptographic hash generation
+- 📁 Register files for integrity monitoring
+- ✅ Verify file integrity
+- 📄 Automatic verification report generation
+- 💾 JSON-based hash storage
+- 🖥️ Modern Tkinter GUI
+- ⌨️ Command-Line Interface (CLI)
+- 📂 Browse files using File Explorer
+- 🟢 Visual verification status indicator
+- 🧹 Clear application fields
+- ❌ Safe application exit
 
 ---
 
-# 🏗 Project Architecture
+# 🖥️ Application Interfaces
 
-```text
-                User
-                  │
-                  ▼
-        Register / Verify File
-                  │
-                  ▼
-      Generate SHA3-256 Hash
-                  │
-          ┌───────┴────────┐
-          ▼                ▼
-      Store Hash       Compare Hash
-          │                │
-          ▼                ▼
-        Vault         Verification
-                             │
-                             ▼
-                      Generate Report
+## Graphical User Interface (GUI)
+
+The GUI version provides a modern and user-friendly desktop application for performing file integrity verification.
+
+### Features
+
+- Browse files using File Explorer
+- Register files with a single click
+- Generate SHA3-256 hash
+- Verify registered files
+- Visual verification status
+- Automatic report generation
+- Clear application fields
+- Safe application exit
+
+Run the GUI version:
+
+```bash
+python gui_integrity_checker.py
 ```
 
 ---
 
-# 🔄 Workflow
+## Command-Line Interface (CLI)
 
-```text
-Start
- │
- ▼
-Create Required Folders
- │
- ▼
-Display Menu
- │
- ├──────────────┐
- ▼              ▼
-Register      Verify
- │              │
- ▼              ▼
-Generate     Generate
-SHA3 Hash    SHA3 Hash
- │              │
- ▼              ▼
-Store        Compare
-Hash         Hashes
- │              │
- ▼              ▼
-             Report
- │
- ▼
-Exit
+The CLI version provides the same functionality through a terminal-based interface.
+
+### Features
+
+- Register files
+- Verify file integrity
+- Generate verification reports
+- JSON-based hash storage
+
+Run the CLI version:
+
+```bash
+python cli_integrity_checker.py
 ```
 
 ---
 
-# 📂 Folder Structure
+# 📸 GUI Preview
+
+### Home Screen
+
+> Add your GUI screenshot here after uploading it.
+
+```markdown
+![Home Screen](screenshots/home.png)
+```
+
+### Verification
+
+```markdown
+![Verification](screenshots/verified.png)
+```
+
+---
+
+# 📂 Project Structure
 
 ```text
 SHA3-File-Integrity-Checker/
 │
-├── integrity_checker.py
+├── gui_integrity_checker.py
+├── cli_integrity_checker.py
 ├── README.md
 ├── LICENSE
 ├── .gitignore
@@ -118,76 +114,130 @@ SHA3-File-Integrity-Checker/
 ├── Vault/
 │   └── hashes.json
 │
-└── Reports/
+├── Reports/
+│   └── report.txt
+│
+└── screenshots/
+    ├── home.png
+    ├── registered.png
+    └── verified.png
 ```
 
 ---
 
-# ⚙ Technologies Used
+# ⚙️ Technologies Used
 
 - Python 3
+- Tkinter
 - hashlib
-- json
-- os
-- datetime
+- JSON
+- OS Module
+- Datetime Module
 
 ---
 
 # 🚀 Installation
 
-Clone the repository.
+Clone the repository:
 
 ```bash
 git clone https://github.com/JefinJaison2005/SHA3-File-Integrity-Checker.git
 ```
 
-Go into the project directory.
+Navigate into the project folder:
 
 ```bash
 cd SHA3-File-Integrity-Checker
 ```
 
-Run the application.
+No additional Python packages are required.
+
+---
+
+# ▶️ Running the Application
+
+### GUI Version
 
 ```bash
-python integrity_checker.py
+python gui_integrity_checker.py
+```
+
+### CLI Version
+
+```bash
+python cli_integrity_checker.py
 ```
 
 ---
 
-# ▶ Usage
+# 🔄 Application Workflow
 
-1. Run the application.
-2. Register a file.
-3. SHA3-256 hash is generated.
-4. Hash is stored securely.
-5. Verify the same file later.
-6. Application reports whether the file has been modified.
+```text
+Start Application
+        │
+        ▼
+Browse File
+        │
+        ▼
+Register File
+        │
+        ▼
+Generate SHA3-256 Hash
+        │
+        ▼
+Store Hash in JSON Database
+        │
+        ▼
+Verify File
+        │
+        ▼
+Generate Current SHA3-256 Hash
+        │
+        ▼
+Compare Stored & Current Hash
+        │
+        ▼
+Generate Verification Report
+        │
+        ▼
+Display Verification Status
+```
 
 ---
 
-# 📊 Technologies Demonstrated
+# 📄 Generated Files
 
-- Cryptography
-- File Handling
-- JSON Storage
-- Modular Programming
-- Error Handling
-- SHA3-256
-- Cybersecurity Concepts
+## Vault
+
+Stores the SHA3-256 hashes of all registered files.
+
+```text
+Vault/
+└── hashes.json
+```
 
 ---
 
-# 🔮 Future Improvements
+## Reports
 
-- GUI using Tkinter
-- Folder Monitoring
-- SQLite Database
-- User Authentication
-- PDF Report Generation
-- Drag-and-Drop File Selection
-- Dark Theme
-- Automatic Periodic Verification
+Stores the latest verification report.
+
+```text
+Reports/
+└── report.txt
+```
+
+---
+
+# 🎯 Future Improvements
+
+- Drag-and-drop file support
+- Batch file verification
+- Progress indicator for large files
+- Export reports as PDF
+- Verification history
+- User authentication
+- Cloud synchronization
 
 ---
 
@@ -195,15 +245,22 @@ python integrity_checker.py
 
 **Jefin Jaison**
 
-Electronics and Communication Engineering
+B.Tech Electronics and Communication Engineering
 
 Rajagiri School of Engineering and Technology
 
-GitHub:
-https://github.com/JefinJaison2005
+GitHub: **https://github.com/JefinJaison2005**
 
 ---
 
-# 📜 License
+# 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, consider giving it a ⭐ on GitHub.
+
+Feedback and suggestions are always welcome!
